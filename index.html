@@ -62,6 +62,33 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        .submenu {
+            position: relative;
+        }
+        .submenu .submenu-content {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .submenu-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .submenu-content a:hover {
+            background-color: #ddd;
+        }
+        .submenu:hover .submenu-content {
+            display: block;
+        }
         .container {
             text-align: center;
             margin-top: 50px;
@@ -79,19 +106,31 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <b> Reflected XSS</b>
-		<a href="http://bugboo.xyz/rxss/rxss.php">Reflected XSS with GET Request</a>
-                <a href="http://bugboo.xyz/p_rxss/p_rxss.php">Reflected XSS with POST Request</a>
-                <a href="http://bugboo.xyz/h_rxss/h_rxss.php">Reflected XSS with HEADER Request</a>
-		<b> Stored XSS</b>
-                <a href="http://bugboo.xyz/g_sxss/g_sxss.php">Stored XSS with GET Request</a>
-                <a href="http://bugboo.xyz/sxss/sxss.php">Stored XSS with POST Request</a>
-                <a href="http://bugboo.xyz/h_sxss/h_sxss.php">Stored XSS with HEADER Request</a>
-                <a href="http://bugboo.xyz/sxss2/sxss2.php">Stored XSS Medium</a>
-		<b> Dom XSS</b>
-                <a href="http://bugboo.xyz/dxss/dxss.php">DOM XSS with GET Request</a>
-                <a href="http://bugboo.xyz/p_dxss/p_dxss.php">DOM XSS with POST Request</a>
-                <a href="http://bugboo.xyz/h_dxss/h_dxss.php">DOM XSS with HEADER Request</a>
+                <div class="submenu">
+                    <a class="dropbtn">Reflected XSS</a>
+                    <div class="submenu-content">
+                        <a href="http://bugboo.xyz/rxss/rxss.php">Reflected XSS with GET Request</a>
+                        <a href="http://bugboo.xyz/p_rxss/p_rxss.php">Reflected XSS with POST Request</a>
+                        <a href="http://bugboo.xyz/h_rxss/h_rxss.php">Reflected XSS with HEADER Request</a>
+                    </div>
+                </div>
+                <div class="submenu">
+                    <a class="dropbtn">Stored XSS</a>
+                    <div class="submenu-content">
+                        <a href="http://bugboo.xyz/g_sxss/g_sxss.php">Stored XSS with GET Request</a>
+                        <a href="http://bugboo.xyz/sxss/sxss.php">Stored XSS with POST Request</a>
+                        <a href="http://bugboo.xyz/h_sxss/h_sxss.php">Stored XSS with HEADER Request</a>
+                        <a href="http://bugboo.xyz/sxss2/sxss2.php">Stored XSS Medium</a>
+                    </div>
+                </div>
+                <div class="submenu">
+                    <a class="dropbtn">DOM XSS</a>
+                    <div class="submenu-content">
+                        <a href="http://bugboo.xyz/dxss/dxss.php">DOM XSS with GET Request</a>
+                        <a href="http://bugboo.xyz/p_dxss/p_dxss.php">DOM XSS with POST Request</a>
+                        <a href="http://bugboo.xyz/h_dxss/h_dxss.php">DOM XSS with HEADER Request</a>
+                    </div>
+                </div>
             </div>
         </div> 
     </div>
